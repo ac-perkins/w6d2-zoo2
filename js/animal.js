@@ -16,7 +16,6 @@
         if (name) { this.name = name; }
         this.name = name;
 
-
     };
 
 
@@ -29,10 +28,22 @@
 
     ns.Animal.prototype.expire = function expire() {
         return (this.isDead = true);
-        // return dead;
     };
 
     ns.Animal.prototype.name = 'Larry';
+
+
+    ns.ZooError = function ZooError(message) {
+        this.name = 'ZooError';
+        this.message = message || 'ERROR';
+        this.stack = (new Error()).stack;
+};
+
+    ns.ZooError.prototype = Object.create(Error.prototype);
+    ns.ZooError.prototype.constructor = ns.ZooError;
+
+
+
 
     window.zoo = ns;
 

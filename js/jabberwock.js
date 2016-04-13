@@ -22,7 +22,7 @@
 
     ns.Jabberwock.prototype.eatAdventurers = function eatAdventurers(num) {
         if (!Number(num)) {
-            throw new TypeError('This is not a number!');
+            throw new ns.ZooError('We need a "NUMBER" of adventurers!');
         }
         return this.name + ' can eat ' + num + ' adventurers';
     };

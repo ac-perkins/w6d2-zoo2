@@ -63,7 +63,7 @@
             tim.eatAdventurers('mint julep');
             assert.ok(tim.eatAdventurers(154), 'This should not execute');
           } catch(err) {
-            assert.strictEqual(err.message, 'This is not a number!', 'Not a number!');
+            assert.strictEqual(err.message, 'We need a "NUMBER" of adventurers!', 'Not a number!');
             console.error(err);
           }
 
